@@ -1,9 +1,9 @@
 import React from 'react'
 
-const WeatherForm = () => {
+const WeatherForm = ({getWeather}) => {
     return (
         <div className='card card-body'>
-            <form action=''>
+            <form  onSubmit={getWeather} >
                 <div className='mb-3'>
                     <input type='text' name='city' placeholder='Nombre de la ciudad' className='form-control' autoFocus />
                 </div>
