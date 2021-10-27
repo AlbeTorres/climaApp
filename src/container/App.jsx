@@ -30,14 +30,22 @@ const App = () =>{
         const {city,country}= e.target.elements;
         const countryValue = country.value;
         const cityValue = city.value;
-    
-        const API_URL=`http://api.openweathermap.org/data/2.5/weather?q=${cityValue},${countryValue}&appid=${WEATHER_KEY}&units=metric`;
-    
-        console.log(`${cityValue} ${countryValue} ${API_URL}`);
 
-        const newWeather= await fetchWeather(API_URL);
+        if(cityValue){
+
+            const API_URL=`http://api.openweathermap.org/data/2.5/weather?q=${cityValue},${countryValue}&appid=${WEATHER_KEY}&units=metric`;
         
-        setWeather(newWeather);
+            console.log(`${cityValue} ${countryValue} ${API_URL}`);
+    
+            const newWeather= await fetchWeather(API_URL);
+            
+            setWeather(newWeather);
+
+        }else{
+
+            setWeather({error:'Por favor inserte una ciudad válida'})
+        }
+    
 
         
         

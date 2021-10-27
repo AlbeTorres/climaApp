@@ -8,7 +8,7 @@ const Weatheinfo = ({weather}) => {
         {
             weather.error && 
             <div className='alert alert-danger'>
-            <p>weather.error</p>
+            <p>{weather.error}</p>
 
             </div>
         }
