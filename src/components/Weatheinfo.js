@@ -12,13 +12,22 @@ const Weatheinfo = ({weather}) => {
 
             </div>
         }
-        <div className='card card-body'>
-            <h4>Localización:  {weather.city},{weather.country} </h4>
-            <h4>Temperatura:  {weather.temperature}*C </h4>
-            <h4>Descripción:  {weather.description} </h4>
-            <h4>Humedad:  {weather.humidity} </h4>
-            <h4>Vientos:  {weather.wind_speed} </h4>
-        </div>
+        
+        {
+            weather.temperature ?
+            <div className='card card-body'>
+                <h6>Localización:  {weather.city},{weather.country} </h6>
+                <h6>Temperatura:  {weather.temperature}*C </h6>
+                <h6>Descripción:  {weather.description} </h6>
+                <h6>Humedad:  {weather.humidity} </h6>
+                <h6>Vientos:  {weather.wind_speed} </h6>
+            </div>
+            :
+            <div className='card card-body'>
+                <h6>Not request yet</h6>
+
+            </div>
+        }
 
 
         </div>

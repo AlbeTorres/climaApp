@@ -2,6 +2,7 @@ import React,{useState, useEffect} from 'react';
 import Weatheinfo from '../components/Weatheinfo';
 import WeatherForm from '../components/WeatherForm';
 import { WEATHER_KEY } from '../key';
+import '../assets/styles/App.scss';
 
 
 
