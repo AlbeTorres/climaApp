@@ -34,7 +34,7 @@ const App = () =>{
 
         if(cityValue){
 
-            const API_URL=`http://api.openweathermap.org/data/2.5/weather?q=${cityValue},${countryValue}&appid=${WEATHER_KEY}&units=metric`;
+            const API_URL=`https://api.openweathermap.org/data/2.5/weather?q=${cityValue},${countryValue}&appid=${WEATHER_KEY}&units=metric`;
         
             console.log(`${cityValue} ${countryValue} ${API_URL}`);
     
